@@ -8,7 +8,7 @@ public class CustomerTest {
 		
 		// VVIP 설계 해보기
 		// 1) 혜택 추기 : 보너스 적립률 :15 %, 할인율 20%, 전문 상담원 VVIP, 추가로 발렛 파킹.
-		
+		// VVIP 전용 초기 보너스 포인트 1000
 		
 		
 		

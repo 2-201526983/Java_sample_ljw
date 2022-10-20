@@ -11,6 +11,7 @@ public class VVIPCustomer extends Customer{
 		bonusRatio = 0.15;
 		saleRatio = 0.2;
 		this.Sp_agentID = Sp_agentID;
+		bonusPoint = 1000;
 	}
 	
 	public int calcPrice(int price){
