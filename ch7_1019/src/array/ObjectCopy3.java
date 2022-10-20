@@ -6,34 +6,47 @@ public class ObjectCopy3 {
 		Book[] bookArray1 = new Book[3];
 		Book[] bookArray2 = new Book[3];
 		
-		bookArray1[0] = new Book("ÅÂ¹é»ê¸Æ", "Á¶Á¤·¡");
-		bookArray1[1] = new Book("µ¥¹Ì¾È", "Çì¸£¸¸ Çì¼¼");
-		bookArray1[2] = new Book("¾î¶»°Ô »ì °ÍÀÎ°¡", "À¯½Ã¹Î");
+		bookArray1[0] = new Book("íƒœë°±ì‚°ë§¥", "ì¡°ì •ë˜");
+		bookArray1[1] = new Book("ë°ë¯¸ì•ˆ", "í—¤ë¥´ë§Œ í—¤ì„¸");
+		bookArray1[2] = new Book("ì–´ë–»ê²Œ ì‚´ ê²ƒì¸ê°€", "ìœ ì‹œë¯¼");
  		
-		bookArray2[0] = new Book(); //°´Ã¼ Á÷Á¢ »ı¼º
+		bookArray2[0] = new Book(); //ê°ì²´ ì§ì ‘ ìƒì„±
 		bookArray2[1] = new Book();
 		bookArray2[2] = new Book();
 		
-		for(int i=0; i<bookArray1.length; i++){   // °¢°¢ÀÇ ¿ä¼Ò¸¦ º¹»ç
+		for(int i=0; i<bookArray1.length; i++){   // ê°ê°ì˜ ìš”ì†Œë¥¼ ë³µì‚¬
 			bookArray2[i].setBookName(bookArray1[i].getBookName());
 			bookArray2[i].setAuthor(bookArray1[i].getAuthor());
 		}
 		
-		for(int i=0; i<bookArray2.length; i++){  //º¹»çµÈ ³»¿ë È®ÀÎ
+		for(int i=0; i<bookArray2.length; i++){  //ë³µì‚¬ëœ ë‚´ìš© í™•ì¸
 			bookArray2[i].showBookInfo();
 		}
 		
-		bookArray1[0].setBookName("³ª¸ñ");   //bookArray1 ÀÇ ³»¿ë ¼öÁ¤
-		bookArray1[0].setAuthor("¹Ú¿Ï¼­");
+		bookArray1[0].setBookName("ë‚˜ëª©");   //bookArray1 ì˜ ë‚´ìš© ìˆ˜ì •
+		bookArray1[0].setAuthor("ë°•ì™„ì„œ");
 		
-		System.out.println("=== bookArray1 ===");    //bookArray1 Ãâ·Â
+		System.out.println("=== bookArray1 ===");    //bookArray1 ì¶œë ¥
 		for(int i=0; i<bookArray1.length; i++){
 			bookArray1[i].showBookInfo();
 		}
 		
-		System.out.println("=== bookArray2 ===");    //bookArray2 Ãâ·Â
+		System.out.println("=== bookArray2 ===");    //bookArray2 ì¶œë ¥
 		for(int i=0; i<bookArray2.length; i++){
-			bookArray2[i].showBookInfo();   // bookArray1 °ú ´Ù¸¥ ³»¿ëÀ¸·Î Ãâ·ÂµÊ
+			bookArray2[i].showBookInfo();   // bookArray1 ê³¼ ë‹¤ë¥¸ ë‚´ìš©ìœ¼ë¡œ ì¶œë ¥ë¨
 		}
+		
+		
+		
+		System.out.println("====== í•´ë‹¹ ë°°ì—´1, ë°°ì—´2ì˜ ì£¼ì†Œê°’ ë¹„êµí•˜ê¸°=========");
+		System.out.println("bookArray1[0] ì˜ ì£¼ì†Œê°’ : " + bookArray1[0]);
+		System.out.println("bookArray2[0] ì˜ ì£¼ì†Œê°’ : " + bookArray2[0]);
+		
+		System.out.println("bookArray1[1] ì˜ ì£¼ì†Œê°’ : " + bookArray1[1]);
+		System.out.println("bookArray2[1] ì˜ ì£¼ì†Œê°’ : " + bookArray2[1]);
+		
+		System.out.println("bookArray1[2] ì˜ ì£¼ì†Œê°’ : " + bookArray1[2]);
+		System.out.println("bookArray2[2] ì˜ ì£¼ì†Œê°’ : " + bookArray2[2]);
+		
 	}
 }
