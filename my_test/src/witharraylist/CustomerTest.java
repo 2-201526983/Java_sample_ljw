@@ -21,7 +21,7 @@ public class CustomerTest {
 		Customer customerKim = new VIPCustomer(10050, "김유신", 12345);
 		
 		
-		Customer customerLjw = new VVIPCustomer(10060, "LJW", 99999);
+		Customer customerLjw = new VVIPCustomer(10060, "LJW", 99999, yes);
 		
 		
 //		customerList.add(customerLee);

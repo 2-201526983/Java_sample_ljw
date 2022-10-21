@@ -4,14 +4,20 @@ public class VVIPCustomer extends Customer{
 	private int Sp_agentID;
 	double saleRatio;
 	
-	public VVIPCustomer(int customerID, String customerName, int Sp_agentID){
+	public boolean park;
+	
+	public VVIPCustomer(int customerID, String customerName, int Sp_agentID, boolean park){
 		super(customerID, customerName);
 	
 		customerGrade = "VVIP";
 		bonusRatio = 0.15;
 		saleRatio = 0.2;
 		this.Sp_agentID = Sp_agentID;
+		
 		bonusPoint = 1000;
+		
+		this.park =  park;
+		
 	}
 	
 	public int calcPrice(int price){
@@ -27,4 +33,25 @@ public class VVIPCustomer extends Customer{
 	public int getAgentID(){
 		return Sp_agentID;
 	}
+	
+	
+	
+
+	static void park(String[] args){
+
+		
+		boolean yes = true;
+		boolean no = false;
+
+		if(yes) {		
+		System.out.println("발렛파킹 이용중");
+		}
+		if(no) {
+		System.out.println("발렛파킹 이용X");
+	}
+	
+	}
+	
+
+	
 }

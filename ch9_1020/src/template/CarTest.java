@@ -4,11 +4,15 @@ public class CarTest {
 
 	public static void main(String[] args) {
 		
-		System.out.println("=== ÀÚÀ²ÁÖÇà ÇÏ´Â ÀÚµ¿Â÷ ===");
+		// ì¶”ê°€í•´ë³´ê¸° ë‚˜ë§Œì˜ ìë™ì°¨
+		// ì¶”ê°€ ê¸°ëŠ¥ (ê³µí†µê¸°ëŠ¥ê³¼, ê° ì°¨ëŸ‰ ë§ˆë‹¤ì˜ ê¸°ëŠ¥)
+		
+		
+		System.out.println("=== ììœ¨ì£¼í–‰ í•˜ëŠ” ìë™ì°¨ ===");
 		Car myCar = new AICar();
 		myCar.run();
 		
-		System.out.println("=== »ç¶÷ÀÌ ¿îÀüÇÏ´Â ÀÚµ¿Â÷ ===");
+		System.out.println("=== ì‚¬ëŒì´ ìš´ì „í•˜ëŠ” ìë™ì°¨ ===");
 		Car hisCar = new ManualCar();
 		hisCar.run();
 	}
