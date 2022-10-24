@@ -4,7 +4,7 @@ public class Swimming implements SwimBehavior {
 
 	@Override
 	public void swim() {
-		System.out.println("¼ö¿µÀ» ÀßÇØ¿ä.!!");
+		System.out.println("ìˆ˜ì˜ì„ ì˜í•´ìš”.!!");
 	}
 
 }

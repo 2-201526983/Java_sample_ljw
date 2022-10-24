@@ -4,7 +4,7 @@ public class FlyNoWay implements FlyBehavior {
 
 	@Override
 	public void fly() {
-		System.out.println("Àú´Â ¸ø ³¯¾Æ¿ä");
+		System.out.println("ì €ëŠ” ëª» ë‚ ì•„ìš”");
 	}
 
 }

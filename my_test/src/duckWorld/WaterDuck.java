@@ -3,18 +3,18 @@ package duckWorld;
 public class WaterDuck extends Duck {
 
 	public WaterDuck() {
-		// ²Ğ ¼Ò¸®³»´Â Å¬·¡½º »ı¼ºÀÚ È£Ãâ
+		// ê½¥ ì†Œë¦¬ë‚´ëŠ” í´ë˜ìŠ¤ ìƒì„±ì í˜¸ì¶œ
 		quackBehavior = new Quack();
-		// ³¯¼ö ÀÖ´Â ¿À¸® 
+		// ë‚ ìˆ˜ ìˆëŠ” ì˜¤ë¦¬ 
 		flyBehavior = new FlyWithWings();
-		// ¼ö¿µ ÇÏ´Â ¿À¸® 
+		// ìˆ˜ì˜ í•˜ëŠ” ì˜¤ë¦¬ 
 		swimBehavior = new Swimming();
 		
 	}
 	
 	@Override
 	public void display() {
-		System.out.println("»ó¿ë ¹°¿À¸®ÀÔ´Ï´Ù.");
+		System.out.println("ìƒìš© ë¬¼ì˜¤ë¦¬ì…ë‹ˆë‹¤.");
 	}
 
 }

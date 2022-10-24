@@ -3,19 +3,29 @@ package duckWorld;
 public class MiniDuckSimulator {
 
 	public static void main(String[] args) {
-		System.out.println("======Ã»µÕ¿À¸®======");
+		System.out.println("======ì²­ë‘¥ì˜¤ë¦¬======");
 		Duck mallard = new MallardDuck();
 		mallard.performQuack();
 		mallard.performFly();
 		mallard.swim();
 		
-		// ¹°¿À¸® ¸¸µé±â. 
-		System.out.println("======¹°¿À¸®======");
+		// ë¬¼ì˜¤ë¦¬ ë§Œë“¤ê¸°. 
+		System.out.println("======ë¬¼ì˜¤ë¦¬======");
 		Duck swimDuck = new WaterDuck();
 		swimDuck.performQuack();
 		swimDuck.performFly();
 		swimDuck.swim();
 		swimDuck.performSwim();
+		
+		//ëª¨ë° ì˜¤ë¦¬ ë§Œë“¤ê¸°
+		System.out.println("======ë¡œì¼“ì˜¤ë¦¬======");
+		Duck model = new ModelDuck();
+		System.out.println("======ë¡œì¼“ ì˜¤ë¦¬ ë³€ê²½ì „===");
+		model.performFly();
+		model.setFlyBehavior(new FlyRocketPowered());
+		System.out.println("======ë¡œì¼“ ì˜¤ë¦¬ ë³€ê²½í›„===");
+		model.performFly();
+		
 		
 	}
 

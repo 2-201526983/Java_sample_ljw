@@ -4,7 +4,7 @@ public class MuteQuack implements QuackBehavior {
 
 	@Override
 	public void quack() {
-		System.out.println("====Á¶¿ëÁ¶¿ë=====");
+		System.out.println("====ì¡°ìš©ì¡°ìš©=====");
 	}
 
 }

@@ -5,13 +5,14 @@ public class ClassTest {
 	public static void main(String[] args) throws ClassNotFoundException {
 
 		Person person = new Person();
-		Class pClass1 = person.getClass();  //Object ÀÇ getClass() ¸Ş¼Òµå »ç¿ë
-		System.out.println(pClass1.getName());
+		Class pClass1 = person.getClass();  //Object ì˜ getClass() ë©”ì†Œë“œ ì‚¬ìš©
+		System.out.println("pClass1.getName()ì˜ ë‚´ìš© " + pClass1.getName());
+		System.out.println("pClass1 ì˜ ë‚´ìš© " + pClass1);
 
-		Class pClass2 = Person.class;    // Á÷Á¢ class ÆÄÀÏ ´ëÀÔ
+		Class pClass2 = Person.class;    // ì§ì ‘ class íŒŒì¼ ëŒ€ì…
 		System.out.println(pClass2.getName());
 		
-		Class pClass3 = Class.forName("classex.Person"); // Å¬·¡½º ÀÌ¸§À¸·Î °¡Á®¿À±â 
-		System.out.println(pClass3.getName());           //ÀÌ¸§°ú ÀÏÄ¡ÇÏ´Â Å¬·¡½º°¡ ¾ø´Â°æ¿ì ClassNotFoundException ¹ß»ıÇÔ
+		Class pClass3 = Class.forName("classex.Person"); // í´ë˜ìŠ¤ ì´ë¦„ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸° 
+		System.out.println(pClass3.getName());           //ì´ë¦„ê³¼ ì¼ì¹˜í•˜ëŠ” í´ë˜ìŠ¤ê°€ ì—†ëŠ”ê²½ìš° ClassNotFoundException ë°œìƒí•¨
 	}
 }

@@ -18,25 +18,17 @@ public class VVIPCustomer extends Customer{
 		
 		this.park =  park;
 		
+		
+		
 	}
 	
 	public int calcPrice(int price){
 		bonusPoint += price * bonusRatio;
 		return price - (int)(price * saleRatio);
 	}
-	
-	public String showCustomerInfo(){
-		return super.showCustomerInfo() + " VVIP 전문 상담원 번호는 " + Sp_agentID + "입니다      " + "발렛 파킹 이용가능합니다";  
 
-	}
-
-	public int getAgentID(){
-		return Sp_agentID;
-	}
 	
 	
-	
-
 	static void park(String[] args){
 
 		
@@ -51,6 +43,35 @@ public class VVIPCustomer extends Customer{
 	}
 	
 	}
+	
+	
+	public String showCustomerInfo(){
+		return super.showCustomerInfo() + " VVIP 전문 상담원 번호는 " + Sp_agentID + "입니다      " + park;  
+
+	}
+
+	public int getAgentID(){
+		return Sp_agentID;
+	}
+	
+	public boolean getpark(){
+		
+		boolean park = true; 
+
+		if(park) {		
+		System.out.println("발렛파킹 이용중");
+		}
+		else {
+		System.out.println("발렛파킹 이용X");
+		}
+		
+		return park;
+	}
+	
+	
+	
+
+
 	
 
 	

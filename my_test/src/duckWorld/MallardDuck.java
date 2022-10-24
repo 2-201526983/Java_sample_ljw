@@ -9,7 +9,7 @@ public class MallardDuck extends Duck {
 	
 	@Override
 	public void display() {
-		System.out.println("Àú´Â ¹°¿À¸®ÀÔ´Ï´Ù.");
+		System.out.println("ì €ëŠ” ë¬¼ì˜¤ë¦¬ìž…ë‹ˆë‹¤.");
 
 	}
 
