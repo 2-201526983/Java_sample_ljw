@@ -9,21 +9,24 @@ public class TestLambda {
 
 	public static void main(String[] args) {
 
-		PrintString lambdaStr = s->System.out.println(s);  //¶÷´Ù½ÄÀ» º¯¼ö¿¡ ´ëÀÔ
+		// PrintString  ì¸í„°íŽ˜ì´ìŠ¤í˜•
+		PrintString lambdaStr = s->System.out.println(s);  //ëžŒë‹¤ì‹ì„ ë³€ìˆ˜ì— ëŒ€ìž…
 		lambdaStr.showString("hello lambda_1");
 		
-		showMyString(lambdaStr);                          //¸Þ¼­µå ¸Å°³º¯¼ö·Î Àü´Þ
+		showMyString(lambdaStr);                          //ë©”ì„œë“œ ë§¤ê°œë³€ìˆ˜ë¡œ ì „ë‹¬
 		
 		PrintString reStr = returnString();  
 		reStr.showString("hello ");
 		
 	}
 	
+	// PrintString ì¸í„°íŽ˜ì´ìŠ¤ í˜•
 	public static void showMyString(PrintString p) {
 		p.showString("hello lambda_2");
 	}
 	
-	public static PrintString returnString() {         //¹ÝÈ¯ °ªÀ¸·Î »ç¿ë
+	// ëžŒë‹¤ì‹ì„ í•¨ìˆ˜í˜• ì¸í„°íŽ˜ì´ìŠ¤ í˜•ì— ë‹´ê³ ìžˆìŒ
+	public static PrintString returnString() {         //ë°˜í™˜ ê°’ìœ¼ë¡œ ì‚¬ìš©
 		return s->System.out.println(s + "world");
 	}
 }

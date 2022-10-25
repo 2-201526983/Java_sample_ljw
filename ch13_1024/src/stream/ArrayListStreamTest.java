@@ -13,13 +13,18 @@ public class ArrayListStreamTest {
 		sList.add("Edward");
 		sList.add("Jack");
 		
+		
 		Stream<String> stream = sList.stream();
 		stream.forEach(s->System.out.print(s + " "));
 		System.out.println();
 		
+		//
 		sList.stream().sorted().forEach(s->System.out.print(s+ " "));
-	//	sList.stream().map(s->s.length()).forEach(n->System.out.println(n));
-	//	sList.stream().filter(s->s.length() >= 5).forEach(s->System.out.println(s));
+		System.out.println();
+		sList.stream().map(s->s.length()).forEach(n->System.out.println(n));
 		
+		sList.stream().filter(s->s.length() >= 5).forEach(s->System.out.println(s));
+		
+	
 	}
 }

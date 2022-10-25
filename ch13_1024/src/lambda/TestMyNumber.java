@@ -3,9 +3,9 @@ package lambda;
 public class TestMyNumber {
 
 	public static void main(String[] args) {
-		MyNumber max = (x, y)->(x>= y)? x:y; // ¶÷´Ù½ÄÀ» ÀÎÅÍÆäÀÌ½º ÀÚ·áÇü max º¯¼ö¿¡ ´ëÀÔ
+		MyNumber max = (x, y)->(x>= y)? x:y; // ëžŒë‹¤ì‹ì„ ì¸í„°íŽ˜ì´ìŠ¤ ìžë£Œí˜• max ë³€ìˆ˜ì— ëŒ€ìž…
 
-		System.out.println(max.getMax(10, 20));// ÀÎÅÍÆäÀÌ½º ÀÚ·áÇü º¯¼ö·Î ÇÔ¼ö È£Ãâ
+		System.out.println(max.getMax(10, 20));// ì¸í„°íŽ˜ì´ìŠ¤ ìžë£Œí˜• ë³€ìˆ˜ë¡œ í•¨ìˆ˜ í˜¸ì¶œ
 		
 	//	MyNumber max2 = (x, y)-> x>=y ?x:y;
 	//	System.out.println(max2.getMax(10, 20));
