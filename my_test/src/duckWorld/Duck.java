@@ -3,7 +3,6 @@ package duckWorld;
 public abstract class Duck {
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
-
 	SwimBehavior swimBehavior;
 	
 	public Duck() {}
