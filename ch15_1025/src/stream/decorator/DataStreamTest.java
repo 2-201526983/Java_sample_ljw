@@ -14,7 +14,7 @@ public class DataStreamTest {
 		try(FileOutputStream fos = new FileOutputStream("data.txt");
 				DataOutputStream dos = new DataOutputStream(fos))
 		{
-		
+		// data.txt 해당 파일에 아래 내용을 출력을 파일에 하고
 			dos.writeByte(100);
 			dos.writeChar('A');
 			dos.writeInt(10);
@@ -27,7 +27,7 @@ public class DataStreamTest {
 		try(FileInputStream fis = new FileInputStream("data.txt");
 				DataInputStream dis = new DataInputStream(fis))
 		{
-		
+		// data.txt 파일을 읽어서 콘솔에 출력
 			System.out.println(dis.readByte());
 			System.out.println(dis.readChar());
 			System.out.println(dis.readInt());

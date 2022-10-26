@@ -35,7 +35,7 @@ public class ExternalizableTest {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		Dog myDog = new Dog();
-		myDog.name = "∏€∏€¿Ã";
+		myDog.name = "Î©çÎ©çÏù¥";
 		
 		
 		FileOutputStream fos = new FileOutputStream("external.out");
