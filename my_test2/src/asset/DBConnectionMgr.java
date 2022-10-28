@@ -1,4 +1,4 @@
-package src.asset;
+package asset;
 
 
 /**
