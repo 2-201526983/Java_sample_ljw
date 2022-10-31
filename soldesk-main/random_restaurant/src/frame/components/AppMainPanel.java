@@ -29,8 +29,6 @@ public class AppMainPanel extends JPanel {
         add(buttonUtils.goRandom(appFrame));
         // 카테고리 버튼
         add(buttonUtils.goCategory(appFrame));
-        
-        
     }
 
     /**
