@@ -11,6 +11,9 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -19,8 +22,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import logins.Member;
-import logins.Sample;
 import frame.AppFrame;
 
 
@@ -116,7 +117,74 @@ public class MemberListFrame extends JFrame {
 		}else {
 			setVisible(true);	
 		}
+		
+		
+		
+		
+	    JMenuBar mb = new JMenuBar();
+        
+        //메뉴 생성
+        JMenu jm = new JMenu("메뉴1");
+        
+        //메뉴 아이템 생성
+        JMenuItem mi1 = new JMenuItem("로그아웃");
+        JMenuItem mi2 = new JMenuItem("회원가입");
+        JMenuItem mi3 = new JMenuItem("랜덤맛집");
+ 
+        //이벤트 리스너 달기
+        //mi1.addActionListener(new MenuActionListener());
+       // mi2.addActionListener(new MenuActionListener());
+      //  mi3.addActionListener(new MenuActionListener());
+       
+        mi1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "로그아웃 되었습니다.");
+				dispose();
+				new LoginFrame();
+			}
+		});
+        
+        mi2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "회원가입 화면 가기.");
+				dispose();
+				new JoinFrame();
+			}
+		});
+        
+        mi3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "랜덤맛집추천 가는중");
+				dispose();
+				AppFrame.getInstance();
+			}
+		});
+                   
+        //메뉴에 아이템 추가
+        jm.add(mi1);
+        jm.addSeparator();    //메뉴 아이템의 구분선 생성
+        jm.add(mi2);
+        jm.add(mi3);
+               
+        //메뉴바에 메뉴 추가
+        mb.add(jm);
+        mb.add(new JMenu("메뉴2"));
+               
+        //프레임에 메뉴바 붙이기
+        setJMenuBar(mb);	
 	}
+	
+	
+	
+	
+	
+	
 
 }
 
