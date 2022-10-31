@@ -24,8 +24,8 @@ public class main extends JFrame {
     
     
     public main() {
-        icon = new ImageIcon("./random_restaurant/resources/img/main.jpg");
-        ImageIcon icon2 = new ImageIcon("./random_restaurant/resources/img/main2.jpg");
+        icon = new ImageIcon("./random_restaurant/resources/img/main2.jpg");
+        ImageIcon icon2 = new ImageIcon("./random_restaurant/resources/img/main1.jpg");
         Image img = icon.getImage();
         
         
@@ -81,21 +81,52 @@ public class main extends JFrame {
         
         
 
-//        setFocusable(true);
-//        addMouseListener(new MouseAdapter() {
-//        	
-//        	@Override
-//        	public void mouseClicked(MouseEvent e) {
-//        		if (img == icon.getImage()) {
+        setFocusable(true);
+        background.addMouseListener(new MouseAdapter() {
+        	
+        	@Override
+        	public void mouseClicked(MouseEvent e) {
+        		if (img == icon.getImage()) {
+//        			System.out.println("출력테스트전");
+//        			   icon = new ImageIcon("./random_restaurant/resources/img/main.jpg");
+//        		        ImageIcon icon2 = new ImageIcon("./random_restaurant/resources/img/main2.jpg");
+//        		        Image img = icon.getImage();
 //        			img = icon2.getImage();
-//        			repaint();
-//        		}
-//        		else {
-//        			img = icon.getImage();
-//        		}
-//        		repaint();
-//        	}
-//		});
+        			System.out.println("리페인트호출전");
+        		       icon = new ImageIcon("./random_restaurant/resources/img/main.jpg");
+        		        ImageIcon icon2 = new ImageIcon("./random_restaurant/resources/img/main2.jpg");
+        		        Image img = icon.getImage();
+        		        repaint();
+        		        
+        		        //배경 Panel 생성후 컨텐츠페인으로 지정      
+//        		        JPanel background = new JPanel() {
+//        		            public void paintComponent(Graphics g) {
+//        		                // Approach 1: Dispaly image at at full size
+//        		                g.drawImage(icon2.getImage(), 0, 0, null);
+//        		                // Approach 2: Scale image to size of component
+//        		                // Dimension d = getSize();
+//        		                // g.drawImage(icon.getImage(), 0, 0, d.width, d.height, null);
+//        		                // Approach 3: Fix the image position in the scroll pane
+//        		                // Point p = scrollPane.getViewport().getViewPosition();
+//        		                // g.drawImage(icon.getImage(), p.x, p.y, null);
+//        		                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+//        		                super.paintComponent(g);
+//        		            }
+//        		        };
+        			System.out.println("리페인트호출후");
+        			
+        		}
+        		else {
+        			System.out.println("2리페인트호출전");
+        			   icon = new ImageIcon("./random_restaurant/resources/img/main2.jpg");
+        		        ImageIcon icon2 = new ImageIcon("./random_restaurant/resources/img/main1.jpg");
+        		        Image img = icon.getImage();
+        			img = icon.getImage();
+        			repaint();
+        		}
+        		
+        	}
+		});
 
         
         
