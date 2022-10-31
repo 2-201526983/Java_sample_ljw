@@ -66,9 +66,11 @@ public class coffeedao {
 			pstmt.setInt(5, bean.getPrice());
 						
 			result = pstmt.executeUpdate();
-			conn.commit();	
 			
 			conn.setAutoCommit(false);  // java.sql.SQLException: 자동 커밋이 설정된 채 커밋할 수 없습니다. 오류
+			conn.commit();	
+			
+		
 			
 			
 		} catch (SQLException e) {
