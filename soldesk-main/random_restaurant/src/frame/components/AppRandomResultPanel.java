@@ -44,9 +44,12 @@ public class AppRandomResultPanel extends JPanel {
 
         // 웹 브라우져 오픈
         add(buttonUtils.openKakaoMap(url.getText()));
+      
         
     }
 
+
+    
     /**
      * 패널 배경 이미지 넣기
      * background 를 그려준다
