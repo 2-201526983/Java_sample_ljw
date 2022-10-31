@@ -44,6 +44,7 @@ public class AppRandomResultPanel extends JPanel {
 
         // 웹 브라우져 오픈
         add(buttonUtils.openKakaoMap(url.getText()));
+        
     }
 
     /**

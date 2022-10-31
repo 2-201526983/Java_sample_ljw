@@ -10,6 +10,7 @@ import static constant.Constants.APP_PANEL_IMG;
 import static constant.PanelCode.APP_MAIN;
 
 public class AppMainPanel extends JPanel {
+	
 
     private ButtonUtils buttonUtils;
 
@@ -28,6 +29,8 @@ public class AppMainPanel extends JPanel {
         add(buttonUtils.goRandom(appFrame));
         // 카테고리 버튼
         add(buttonUtils.goCategory(appFrame));
+        
+        
     }
 
     /**
@@ -41,5 +44,10 @@ public class AppMainPanel extends JPanel {
         Image image = new ImageIcon(APP_PANEL_IMG).getImage();
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
+
+ 
+    
 }
+
+
 

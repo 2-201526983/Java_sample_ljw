@@ -67,7 +67,7 @@ public class Constants {
     public final static String LOADING = "LOADING...";
 
     // 깃 주소
-    public final static String GIT = "https://github.com/m-veloper/soldesk/tree/main/random_restaurant";
+    public final static String GIT = "https://github.com/2-201526983/Java_sample_ljw/tree/master/soldesk-main";
 
 
 }
