@@ -39,7 +39,7 @@ public class TestMain {
 		System.out.println(report); // 출력
 		
 		//파일에 출력 하기. 
-		try (FileWriter fw = new FileWriter("testInfo.txt")) {
+		try (FileWriter fw = new FileWriter("resultInfo.txt ")) {
 			fw.write(report);
 			
 		} catch (Exception e) {
@@ -61,8 +61,6 @@ public class TestMain {
 		int mathScore;
 		int danceScore;
 		int majorCode;
-		int computerScore;
-		
 		Student student = null;
 		
 		while(scanner.hasNext()) {
@@ -71,7 +69,6 @@ public class TestMain {
 			koreanScore = scanner.nextInt();
 			mathScore = scanner.nextInt();
 			danceScore = scanner.nextInt();
-			computerScore = scanner.nextInt();
 			majorCode = scanner.nextInt();
 
 			
@@ -82,9 +79,7 @@ public class TestMain {
 			} else if (majorCode == Define.DANCE) {
 				student = new Student(id, name, dance);
 			}
-			 else if (majorCode == Define.COMPUTER) {
-				student = new Student(id, name, computer);
-				}
+
 			 else {
 				System.out.println("전공 과목 오류입니다.");
 			}
@@ -93,12 +88,10 @@ public class TestMain {
 			korean.register(student);
 			math.register(student);
 			dance.register(student);
-			computer.register(student);
 			
 			addScoreForStudent(student, korean, koreanScore);
 			addScoreForStudent(student, math, mathScore);
 			addScoreForStudent(student, dance, danceScore);
-			addScoreForStudent(student, computer, computerScore);
 		}
 		scanner.close();
 		
@@ -130,10 +123,6 @@ public class TestMain {
 				dance = new Subject(subjectName,subjectId);
 				dance.setGradeType(Define.PF_TYPE);
 				goodSchool.addSubject(dance);
-			}
-			else if(subjectFirstSpell.equals("C")) {
-				computer = new Subject(subjectName,subjectId);
-				goodSchool.addSubject(computer);
 			}
 			else {
 				System.out.println("아직 미개설 과목입니다.");

@@ -22,7 +22,7 @@ public class GradeTest {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		GradeTest test = new GradeTest();
-		test.creatSubject();
+		test.creatSubject2();
 		test.createStudent();
 		
 		String report = test.gradeReport.getReport(); //성적 결과 생성
@@ -30,7 +30,7 @@ public class GradeTest {
 		
 	}
 	
-	public void creatSubject(){
+	public void creatSubject2(){
 		
 		korean = new Subject("국어", Define.KOREAN);
 		math = new Subject("수학", Define.MATH);
