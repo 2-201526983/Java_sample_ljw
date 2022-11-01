@@ -21,23 +21,20 @@
 - 소스코드
         
       create table member(
-  id number primary key,
-  username varchar2(15),
-  password varchar2(15),
-  name varchar2(15),
-  email varchar2(30),
-  phone varchar2(15),
-  createDate timestamp
-);
+	  id number primary key,
+      username varchar2(15),
+      password varchar2(15),
+      name varchar2(15),
+      email varchar2(30),
+      phone varchar2(15),
+      createDate timestamp
+      );
+      create sequence member_seq
+      start with 1
+      increment BY 1
+      maxvalue 10000;
 
-
-create sequence member_seq
-  start with 1
-  increment BY 1
-  maxvalue 10000;
-
-
-commit;
+      commit;
            
 #### 가져온 외부 프로젝트
 - 맛집 랜덤추천 프로그램
