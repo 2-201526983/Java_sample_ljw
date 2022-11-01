@@ -1,41 +1,49 @@
-# 솔데스크 (soldesk) 딥러닝 기반의 개인화 서비스 구축을 위한 추천 시스템, 챗봇 개발자 과정
+# 자바 프로젝트 
 
-### SWING PROJECT
+### 기능 및 사용 언어
 
-- 개발 이유 : 점심시간에 무엇을 먹을지에 대해서 결정을 하지 못하는 일이 종종 발생하기 때문에 랜덤으로 결정해 주는 스윙 프로그램을 개발하였습니다.
-- 서비스 언어 : Java
+- 기능 : 수업시간에 사용했던 회원가입 툴을 활용한 로그인 회원가입, 마우스 리스너를 이용한 마우스 클릭이벤트로 이미지 바꾸기, 랜덤함수로 맛집 랜덤 추천 등
 
-- 디자인 : 포토샵을 사용하여 이미지를 제작
+- 사용언어 : Java, swing
 
-- 데이터 : 카카오 맵 지도 검색 데이터를 사용.
-     - 자바 언어와, 객체 사용에 대해 숙달을 목표로, 복잡해지는 DB화를 하지 않고, DTO 클래스에 데이터를 하드 코딩
      
-#### 프레임을 어떻게 설계하였는가?
+#### 난관
 
-- 설계 : ONE(SINGLE) FRAME -> 하나의 프레임 위에 패널을 겹쳐 진행되는 프로세스
+- 설계 : 외부 프로젝트를 가져와서 어떤식으로 변경을 하고 어떤 기능을 넣어서 설계를 해야할지 많은 고민
 
-    - 이유 : 많은 학생들이 스윙 프로젝트를 진해할 때 프레임을 한 개만 띄워서 진행되는 프로세스가 아니라, 어떠한 액션이 이루어졌을 때
-            많은 프레임들이 열리고, 그 위에 화면을 그리는 방식 이거나, 이 전 프레임을 핸들링(삭제, 또는 숨기기) 방향으로 프로세스가 진행되기 때문에
-            ONE FRAME 설계를 원하는 학생들에게 방법을 공유하고자 합니다.
-      
+- 코드이해 : 가져온 외부 프로젝트나 기능을 넣을때에 코드를 이해하지 못해 많은 오류 발생
+
+- 구현불가 : 구현하고 싶은 기능이 많았지만 (DB에 이미지 삽입 후 랜덤함수로 불러 오고 불러온 주소를 api 문자서비스를 이용해 휴대폰에 전송 등등) 아직 배우지 않은 프로그램을 사용한다던가 구현하기가 난해해 기능등을 제외하고 나머지를 하드코딩으로 구현해야 했음. 
+
             
-#### CardLayout
+#### DB코드
 
-- CardLayout 클래스를 사용하여 layout에 CardLayout을 설정하여 사용하고, 그림을 패널에 끼워 사용합니다.
-- 자세한 코드는 소스코드에 있습니다. CardLayout 이해를 돕기 위해 코드를 첨부합니다.
+- 소스코드
         
-       public AppFrame() {
-           CardLayout cards = new CardLayout();
-           getContentPane().setLayout(cards);
-           getContentPane().add("testPanel", new TestPanel(this));
-       }
+      create table member(
+  id number primary key,
+  username varchar2(15),
+  password varchar2(15),
+  name varchar2(15),
+  email varchar2(30),
+  phone varchar2(15),
+  createDate timestamp
+);
+
+
+create sequence member_seq
+  start with 1
+  increment BY 1
+  maxvalue 10000;
+
+
+commit;
            
-#### 프로세스 화면
-- 심플한걸 좋아하는 취향에 따라 간결하게 디자인 하였습니다.
-- 아이폰 앱 화면으로 구성하였으며, 프로세스 또한 하나의 프레임에서 원하는 화면으로 이동 또는, 뒤로갈 수 있습니다.
+#### 가져온 외부 프로젝트
+- 맛집 랜덤추천 프로그램
 
 
-![20211229_183552](https://user-images.githubusercontent.com/58251630/147650017-8e7758f6-62c0-4282-b915-fdf75e1cc22d.png)
+
 ![20211229_183612](https://user-images.githubusercontent.com/58251630/147650019-0d9b5e0d-fd96-4a63-833f-b4736c8082c6.png)
 ![20211229_183635](https://user-images.githubusercontent.com/58251630/147650021-362f95a4-04ac-4aff-9dac-c135494026c4.png)
 
